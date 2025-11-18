@@ -8,7 +8,7 @@ from typing import Dict, List, Any
 # ============================================================
 st.set_page_config(
     page_title="Ordify - Sistema de Gestión",
-    page_icon="🍽️",
+    page_icon="",
     layout="wide"
 )
 
@@ -372,7 +372,7 @@ def vista_admin_mesero():
 
     # Tabs dentro de card
     st.markdown('<div class="ordify-section">', unsafe_allow_html=True)
-    tabs = st.tabs(["🏠 Mesas", "🍽️ Pedidos", "📦 Inventario", "💰 Cuentas"])
+    tabs = st.tabs(["Mesas", "Pedidos", "Inventario", "Cuentas"])
     st.markdown('</div>', unsafe_allow_html=True)
 
     # ----------------------- TAB MESAS -----------------------
@@ -428,7 +428,7 @@ def vista_admin_mesero():
 
                 st.markdown("#### Selecciona platillos por categoría")
 
-                # 🔽 CAMBIO: selects por categoría en lugar de un campo por producto
+                # CAMBIO: selects por categoría en lugar de un campo por producto
                 for tipo, items_cat in inventario.items():
                     st.markdown(f"##### {tipo.replace('_', ' ').title()}")
 
@@ -462,7 +462,7 @@ def vista_admin_mesero():
                             "cantidad": int(cantidad),
                             "tipo": tipo,
                         })
-                # 🔼 FIN CAMBIO
+                # FIN CAMBIO
 
                 if st.button("Confirmar pedido"):
                     if not items_seleccionados:
