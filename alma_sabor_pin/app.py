@@ -344,7 +344,7 @@ def vista_login():
     st.markdown('<div class="ordify-section">', unsafe_allow_html=True)
     st.title("Ordify")
     st.subheader("Acceso al sistema de gestión")
-    st.markdown("### Inicio de sesión por PIN (6 dígitos)")
+    st.markdown("### Inicio de sesión por PIN ")
 
     with st.form("form_login"):
         pin = st.text_input("PIN", max_chars=6, type="password", help="Ingresa tu PIN de 6 dígitos")
